@@ -16,7 +16,6 @@ const NavBar = () => {
                         <Nav.Link href={'/Shows'}>Shows</Nav.Link>
                         <Nav.Link href={'/About'}>About</Nav.Link>
                         <Nav.Link href={'/Music'}>Music</Nav.Link>
-                        <Nav.Link href={'/Admin'}>Admin</Nav.Link>
                     </Nav>
             </Container>
         </Navbar>
@@ -26,5 +25,3 @@ const NavBar = () => {
 }
 
 export default NavBar;
-
-{/* <Link style={{textdecoration: 'none', color: 'white'}} to={`/${page}`}>{page}</Link> */}

@@ -1,10 +1,8 @@
+import '../App.css';
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-import Button from '@mui/material/Button';
 import '../App.css';
-import TextField from '@mui/material/TextField';
 import AdminCrud from '../components/AdminCrud'
-
 
 
 const Admin = (props) => {
@@ -39,18 +37,6 @@ const Admin = (props) => {
         event.preventDefault()
         console.log(userSignIn)
         handleUserLogin(userSignIn)
-    }
-
-    //========READ USER==============
-    const getUsers = () => {
-        axios
-            .get(BASE_URL + 'useraccount')
-            .then(
-            (response) => setUsers(response.data),
-            (err) => console.error(err)
-            )
-            .catch((error) => console.error(error))
-        console.log(users)
     }
 
     //======== CREATE USER ==============
@@ -90,100 +76,57 @@ const Admin = (props) => {
             })
     }
 
-    // //============== LOGIN FORM ==============
 
-    const Login = () => {
-        return(
-            <>
-            <div className="container">
-
-        <form>
-            <TextField
-                style={{ width: "400px", margin: "5px", align: 'center'}}
-                type="text"
-                label="Email"
-                variant="outlined"
-                name="email" 
-                value={user.email}
-                onChange={handleChange}
-            />
-            <br />
-            <TextField
-                style={{ width: "400px", margin: "5px" }}
-                type="text"
-                label="Password"
-                variant="outlined"
-                name="password" 
-                value={user.password}
-                onChange={handleChange}
-            />
-            <br />
-            <Button id='Button' onClick={handleSubmitExit} type="submit" variant="contained">Create Account</Button>
-            <Button id='Button' onClick={handleSubmitLogin} type="submit" variant="contained">Login</Button>
-
-
-        </form>
-    </div>
-            </>
-        )
-    }
-    const UserPage = () => {
-        return (
-            <>
-            <h1>User page goes here</h1>
-            <h1> ID: {user.id}</h1>
-            <h1> Email: {user.email}</h1>
-            <h1> Password: {user.password}</h1>
-            </>
-        )
-    }
-    useEffect(() => {
-        getUsers()
-        }, [])
 
     return (
-        <>    
-        <div id='homeBackground' 
-            style={{ 
-                background: '#757575'
-                }}>
-        {userLogIn ? <AdminCrud /> : 
         <>
-        <div className="showContainer">
-            <h1 id='title'>Band Login</h1>
-        </div>
-        <div className="showContainer">
-            <form id='loginForm'>
-            <TextField
-                style={{ width: "400px", margin: "5px"}}
+        {userLogIn ? <AdminCrud /> :
+        <div className="Auth-form-container">
+        <form className="Auth-form">
+            <div className="Auth-form-content">
+            <h3 className="Auth-form-title">Sign In</h3>
+            <div className="form-group mt-3">
+                <label>Email address</label>
+                <input
                 type="text"
                 label="Email"
                 variant="outlined"
                 name="email" 
                 value={user.email}
                 onChange={handleChange}
-            />
-            <br />
-            <TextField
-                style={{ width: "400px", margin: "5px" }}
+                className="form-control mt-1"
+                placeholder="Enter email"
+                />
+            </div>
+            <div className="form-group mt-3">
+                <label>Password</label>
+                <input
                 type="password"
                 label="Password"
                 variant="outlined"
                 name="password" 
                 value={user.password}
                 onChange={handleChange}
-            />
-            <br />
-            {/* <Button id='Button' onClick={handleSubmitExit} type="submit" variant="contained">Create Account</Button> */}
-            <Button id='Button' onClick={handleSubmitLogin} type="submit" variant="contained">Login</Button>
-
-
-            </form>
-        </div>
+                className="form-control mt-1"
+                placeholder="Enter password"
+                />
+            </div>
+            <div className="d-grid gap-2 mt-3">
+                <button 
+                type="submit" 
+                className="btn btn-primary"
+                onClick={handleSubmitLogin}
+                >Submit</button>
+            </div>
+            <p className="forgot-password text-right mt-2">
+                Forgot <a href="#">password?</a>
+            </p>
+            </div>
+        </form>
+    </div>
+    }   
         </>
-        }
-        </div>
-        </>
-    )
+    );
 }
-export default Admin
+
+export default Admin;
