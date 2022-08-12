@@ -3,7 +3,7 @@ import '../App.css';
 const Home = () => {
     return (
         <>
-        <div className='container'>
+        <div className='mainContainer'>
             <div className='home'>
                 <h1 className='homeText'>Ben &</h1>
                 <h1 className='homeText'>Zach &</h1>

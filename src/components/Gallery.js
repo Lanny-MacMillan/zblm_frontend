@@ -1,15 +1,15 @@
 import '../App.css';
 
-const Shows = () => {
+const Gallery = () => {
     return (
         <>
         <div className='mainContainer'>
-            <div className='shows'>
-                <h1>Shows Page</h1>
+            <div className='gallery'>
+                <h1>Gallery Page</h1>
             </div>
         </div>
         </>
     );
 }
 
-export default Shows;
+export default Gallery;
