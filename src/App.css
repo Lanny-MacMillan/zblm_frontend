@@ -105,7 +105,7 @@ label {
 .member1 {  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr 1.8fr;
+  grid-template-rows: 1fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -116,7 +116,9 @@ label {
   box-shadow: rgb(13, 247, 36) 0px 54px 55px, rgb(13, 247, 36) 0px -12px 30px, rgb(13, 247, 36) 0px 4px 6px, rgb(13, 247, 36) 0px 12px 13px, rgb(13, 247, 36) 0px -3px 5px;
 }
 
-.memberImg1 { grid-area: memberImg1; }
+.memberImg1 { 
+  grid-area: memberImg1;
+}
 
 .member1Name { 
   grid-area: member1Name; 
@@ -127,11 +129,14 @@ label {
   
 }
 
-.member1About { grid-area: member1About; }
+.member1About { 
+  grid-area: member1About;
+}
 
-.member2 {  display: grid;
+.member2 {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr 1.8fr;
+  grid-template-rows: 1fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -156,7 +161,7 @@ label {
 
 .member3 {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr 1.8fr;
+  grid-template-rows: 1fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -182,7 +187,7 @@ label {
 
 .member4 {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr 1.8fr;
+  grid-template-rows: 1fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -205,3 +210,37 @@ label {
 }
 
 .member4About { grid-area: member4About; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 575px) {
+  .container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px 30px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "aboutBand"
+      "member1"
+      "member2" 
+      "member3" 
+      "member4";
+  }
+}
+@media only screen and (min-device-width: 576px) and (max-device-width: 767px) {
+  .container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr;
+    gap: 5px 5px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "aboutBand"
+      "member1"
+      "member2" 
+      "member3" 
+      "member4";
+  }
+}
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 575px) {
+
+} */

@@ -55,7 +55,7 @@ const About = () => {
                 src={Leeman}
                 />
             </div>
-            <div className="member4Name">Matty Leeman</div>
+            <div className="member4Name">Matthew Leeman</div>
             <div className="member4About">
                 <p>About Band info goes Here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut lorem mauris. Proin accumsan fermentum feugiat. Fusce vestibulum justo non scelerisque interdum. Nullam eu euismod nunc. Vivamus euismod dolor est, non feugiat est laoreet quis. Aliquam vitae mollis velit, id consequat augue. Pellentesque ante felis, lacinia vitae enim vel, consectetur bibendum leo. Aliquam erat volutpat. Suspendisse potenti. Nunc finibus id tortor ac tempor. Curabitur eget lectus in purus varius facilisis. Duis pellentesque malesuada ex mattis congue. Mauris eu aliquet dolor. Nulla ex risus, condimentum accumsan aliquet non, blandit pellentesque mauris. Curabitur sed egestas ex.</p>  
             </div>
