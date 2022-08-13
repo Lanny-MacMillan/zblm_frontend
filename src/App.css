@@ -209,21 +209,27 @@ label {
   text-align: center;
 }
 
-.member4About { grid-area: member4About; }
+.member4About { 
+  grid-area: member4About;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 575px) {
   .container {  
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    gap: 30px 30px;
+    gap: 5px 5px;
     grid-auto-flow: column;
     grid-template-areas:
       "aboutBand"
       "member1"
       "member2" 
       "member3" 
-      "member4";
+      "member4"
+  }
+  .homeText {
+    font-size: 45px;
   }
 }
 @media only screen and (min-device-width: 576px) and (max-device-width: 767px) {
@@ -239,6 +245,9 @@ label {
       "member2" 
       "member3" 
       "member4";
+  }
+  .homeText {
+    font-size: 45px;
   }
 }
 /* @media only screen and (min-device-width: 768px) and (max-device-width: 575px) {
