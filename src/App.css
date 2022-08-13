@@ -11,6 +11,7 @@
 }
 .home {
   background: black;
+  margin-top: 95px;
 }
 .homeText {
   font-family: 'Anton', sans-serif;
@@ -45,7 +46,7 @@ p {
   text-align: center; 
   font-size: 2em;
   letter-spacing: .3em;
-
+  margin-top: 85px;
 }
 
 
@@ -106,7 +107,7 @@ label {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr .8fr;
+  grid-template-rows: .7fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -138,7 +139,7 @@ label {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr .8fr;
+  grid-template-rows: .7fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -165,7 +166,7 @@ label {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr .8fr;
+  grid-template-rows: .7fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -193,7 +194,7 @@ label {
   margin-bottom: 20px; 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr .8fr;
+  grid-template-rows: .7fr 0.2fr .8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -239,6 +240,9 @@ label {
   .homeText {
     font-size: 45px;
   }
+  .home {
+    margin-top: 95px;
+  }
 }
 @media only screen and (min-device-width: 576px) and (max-device-width: 767px) {
   .container {  
@@ -256,6 +260,9 @@ label {
   }
   .homeText {
     font-size: 45px;
+  }
+  .home {
+    margin-top: 95px;
   }
 }
 /* @media only screen and (min-device-width: 768px) and (max-device-width: 575px) {
