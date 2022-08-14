@@ -11,7 +11,7 @@ const NavBar = () => {
         <Navbar collapseOnSelect fixed='top' expand='sm' bg="dark" variant="dark">
             <Container>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-                <Navbar.Brand href={'/Admin'}>BZL&L Bandpage</Navbar.Brand>
+                <Navbar.Brand id='green' href={'/Admin'}>BZL&L Bandpage</Navbar.Brand>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav className="mr-auto">
                             <Nav.Link href={'/'}>Home</Nav.Link>
