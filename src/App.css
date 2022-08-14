@@ -2,6 +2,9 @@
 * {
   background: black;
 }
+h1 {
+  text-align: center;
+}
 .mainContainer {
   display: flex;
   flex-direction: row;
@@ -48,7 +51,29 @@ p {
   letter-spacing: .3em;
   margin-top: 85px;
 }
-
+.Music {
+  margin-top: 95px;
+}
+.shows {
+  margin-top: 95px;
+}
+.gallery {
+  margin-top: 95px;
+}
+#adminCrud {
+  margin-top: 85px;
+}
+#green, td {
+  color: rgb(13, 247, 36);
+}
+#adminButtons {
+  background-color: #222529;
+  color: white;
+}
+#adminButtons:hover {
+  background-color: rgb(13, 247, 36);
+  color: black;
+}
 
 /* ===================== LOGIN FORM ===================== */
 .Auth-form-container {
