@@ -1,5 +1,6 @@
 import '../App.css';
 import Leeman from '../images/DrumsSolo.jpg'
+import Ben from '../images/Fish.JPG'
 
 
 
@@ -16,7 +17,7 @@ const About = () => {
             <div className="memberImg1">
             <img
                 className="d-block w-100"
-                src={Leeman}
+                src={Ben}
                 />
             </div>
             <div className="member1Name">Ben Salmon "Fish"</div>
