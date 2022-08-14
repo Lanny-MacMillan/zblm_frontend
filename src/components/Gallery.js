@@ -1,16 +1,15 @@
-import Button from 'react-bootstrap/Button';
+import '../App.css';
 
 const Gallery = () => {
-  return (
-    <div className="d-grid gap-2">
-      <Button variant="primary" size="lg">
-        Block level button
-      </Button>
-      <Button variant="secondary" size="lg">
-        Block level button
-      </Button>
-    </div>
-  );
+    return (
+        <>
+        <div className='mainContainer'>
+            <div className='gallery'>
+                <h1>Gallery Page</h1>
+            </div>
+        </div>
+        </>
+    );
 }
 
 export default Gallery;

@@ -41,7 +41,7 @@ const About = () => {
             <div className="memberImg3">
             <img
                 className="d-block w-100"
-                src={Leeman}
+                src={Ben}
                 />
             </div>
             <div className="member3Name">Lanny MacMillan</div>
