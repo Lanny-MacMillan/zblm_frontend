@@ -1,8 +1,9 @@
 import '../App.css';
 import axios from 'axios'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import '../App.css';
 import AdminCrud from '../components/AdminCrud'
+import Button from 'react-bootstrap/Button';
 
 
 const Admin = (props) => {
@@ -75,7 +76,9 @@ const Admin = (props) => {
                 } 
             })
     }
-
+    const forgotPassword = () => {
+        alert('Jesus Christ...Text your bandmates if you forgot, or contact the Site Admin')
+    }
 
 
     return (
@@ -84,7 +87,7 @@ const Admin = (props) => {
         <div className="Auth-form-container">
         <form className="Auth-form">
             <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="Auth-form-title" id='green'>Sign In</h3>
             <div className="form-group mt-3">
                 <label>Email address</label>
                 <input
@@ -112,14 +115,15 @@ const Admin = (props) => {
                 />
             </div>
             <div className="d-grid gap-2 mt-3">
-                <button 
+                <Button 
                 type="submit" 
-                className="btn btn-primary"
+                id='adminButtons'
+                variant='light'
                 onClick={handleSubmitLogin}
-                >Submit</button>
+                >Submit</Button>
             </div>
             <p className="forgot-password text-right mt-2">
-                Forgot <a href="#">password?</a>
+                Forgot <a href='' onClick={forgotPassword}>password?</a>
             </p>
             </div>
         </form>
