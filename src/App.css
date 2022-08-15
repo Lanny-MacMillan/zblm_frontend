@@ -12,6 +12,21 @@ h1 {
   justify-content: center;
   align-self: center;
 }
+.showContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 720px;
+}
+#card {
+  margin-top: 85px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+#cardTitle {
+  color: rgb(13, 247, 36);
+}
 .home {
   background: black;
   margin-top: 95px;
