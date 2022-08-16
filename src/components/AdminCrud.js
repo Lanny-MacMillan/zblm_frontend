@@ -4,6 +4,9 @@ import Shows from '../components/AdminShow';
 import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState} from 'react'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const AdminCrud = () => {
     const [photos, setPhotos] = useState(false)
@@ -34,19 +37,34 @@ const AdminCrud = () => {
         )
     }
 
+
     return (
         <>
-        <div className="d-grid gap-2" id='adminCrud'>
+        <Container fluid='true' id='adminCrud'>
+        <Row id='adminRow'>
+            <Col> 
+            <div className="d-grid gap-2">
             <Button id='adminButtons' onClick={photoPage} variant="light">
-                Photo Page
-            </Button>
-            <Button id='adminButtons' onClick={showPage} variant="light">
-                Shows Page
-            </Button>
+                    Photos
+                </Button>
+                </div>
+            </Col>
+            <Col>
+            <div className="d-grid gap-2">
+                <Button id='adminButtons' onClick={showPage} variant="light">
+                    Shows
+                </Button>
+                </div>
+            </Col>
+            <Col>
+            <div className="d-grid gap-2">
             <Button id='adminButtons' onClick={songPage} variant="light">
-                Set List
-            </Button>
-        </div>
+                    Set List
+                </Button>
+                </div>
+            </Col>
+        </Row>
+        </Container>
         {photos ? <Photos /> : null}
         {shows ? <Shows /> : null}
         {songs ? <Setlist /> : null}

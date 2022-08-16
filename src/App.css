@@ -35,6 +35,9 @@ h1 {
   background: white;
   border-radius: 25px;
 }
+#adminRow {
+  margin: 5px;
+}
 .homeText {
   font-family: 'Anton', sans-serif;
   margin-top: 45px;

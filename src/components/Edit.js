@@ -107,6 +107,7 @@ const Edit = (props) => {
                 variant="outlined"
                 name="location" 
                 value={show.location}
+                onChange={handleChange}
                 className="form-control mt-1"
                 />
             </div>

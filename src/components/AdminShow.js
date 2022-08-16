@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as React from 'react';
 import Edit from '../components/Edit'
+import Add from '../components/Add'
 import { BsArrowDownCircle } from 'react-icons/bs'
 
 
@@ -111,8 +112,7 @@ const Shows = (props) => {
                     <BsArrowDownCircle id='arrowIcon'/>
                     </p>
                 </Card.Body>
-                </Card>
-
+                <h5 id='title'>{show.location}</h5>
                 {/*============= GOOGLE MAPS API =============*/}
                 <iframe
                         className="map"
@@ -122,6 +122,7 @@ const Shows = (props) => {
                         src={`${googleURL} + ${show.location}`}>
                     </iframe>
                 {/*============= GOOGLE MAPS API =============*/}
+                </Card>
                 </> 
             )
             })}
@@ -141,6 +142,18 @@ const Shows = (props) => {
         setShows(shows.filter(show => show.id == selectedshow.id))
     }
     
+    const handleCreate = (addShow) => {
+        axios
+            .post(APIBaseURL, addShow)
+            .then((response) => {
+            setShows([...shows, response.data])
+            .catch((error) => {
+                console.log("Problem submitting New Post", error);
+            });
+            // getShows()
+            }
+            )
+    }
 
     const handleUpdate =(editshow) => {
         console.log('before .put App.js')
@@ -172,6 +185,10 @@ const Shows = (props) => {
 
     return (
         <>
+        <div className="d-grid gap-2">
+        <Add shows={shows} handleCreate={handleCreate}/> 
+        </div>
+
             {showShows ? <DisplayAll/> : null}
             {showshow ? <DisplayOne/> : null}     
         </>
