@@ -1,8 +1,9 @@
 import '../App.css';
 import Setlist from '../components/Setlist';
+import Shows from '../components/AdminShow';
 import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 const AdminCrud = () => {
     const [photos, setPhotos] = useState(false)
@@ -32,13 +33,6 @@ const AdminCrud = () => {
             </>
         )
     }
-    const Shows = () => {
-        return (
-            <>
-            <h1>Shows Page</h1>
-            </>
-        )
-    }
 
     return (
         <>
@@ -53,9 +47,9 @@ const AdminCrud = () => {
                 Set List
             </Button>
         </div>
-        {photos ? <Photos/> : null}
-        {shows ? <Shows/> : null}
-        {songs ? <Setlist/> : null}
+        {photos ? <Photos /> : null}
+        {shows ? <Shows /> : null}
+        {songs ? <Setlist /> : null}
         </>
     );
 }

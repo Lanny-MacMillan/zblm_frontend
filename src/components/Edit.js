@@ -15,7 +15,7 @@ const Edit = (props) => {
     }
     return (
         <>
-        <Button id='Button' type="button" variant="outlined" data-bs-toggle="modal" data-bs-target="#editModal">
+        <Button id='Button' type="button" variant="warning" data-bs-toggle="modal" data-bs-target="#editModal">
         Edit Show
         </Button>
 
@@ -141,8 +141,8 @@ const Edit = (props) => {
             <div className="d-grid gap-2 mt-3">
                 <Button 
                 type="submit" 
-                id='adminButtons'
-                variant='light'
+                // id='adminButtons'
+                variant='primary'
                 onClick={handleSubmit}
                 >Submit</Button>
             </div>

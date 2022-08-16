@@ -3,15 +3,14 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as React from 'react';
+import Edit from '../components/Edit'
 
 
-const Shows = () => {
+const Shows = (props) => {
     const [shows, setShows] = useState([])
     const [showShows, setShowShows] = useState(true)
     const [showshow, setShowshow] = useState(false)
-    import { BsArrowDownCircle } from 'react-icons/bs'
-
-
+    const { loading = false } = props;
 
     const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_API_KEY}&q=`
     const APIBaseURL = 'https://leeman-backend.herokuapp.com/api/shows'
@@ -59,16 +58,8 @@ const Shows = () => {
                 <Card className='text-center' id='card' 
                 style={{ width: '100vh' }}
                 >
-                <Card.Header className='p-0' id='cardHeader'>
-                        <Button 
-                        id='Button' 
-                        type="button" 
-                        variant="light" 
-                        onClick={homePage}>Back
-                        </Button>
+                <Card.Header>
                     {show.date}
-
-                    
                 </Card.Header>
                 <Card.Img variant="top" src={show.image} />
                 <Card.Body>
@@ -82,10 +73,10 @@ const Shows = () => {
                         <h6 id='textColor'>{show.time}</h6>
                         {show.other}
                     </Card.Text>
-                    {/* <Edit handleUpdate={handleUpdate} show={show}/> */}
-                        {/* <Button id='Button' type="button" variant="outlined"  data-bs-toggle="modal" data-bs-target="#deleteModal">
+                    <Edit handleUpdate={handleUpdate} show={show}/>
+                    <Button id='Button' type="button" variant="danger"  data-bs-toggle="modal" data-bs-target="#deleteModal">
                         Delete show
-                        </Button> */}
+                    </Button>
 
                     <Button 
                         id='Button' 
@@ -93,9 +84,24 @@ const Shows = () => {
                         variant="light" 
                         onClick={homePage}>Back
                     </Button>
-                    <br/>
-                    <BsArrowDownCircle/>
-                    <p id='red'>See Google Maps info below for show location</p>
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Confirm Delete</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this Show Permanantly?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" className="btn btn-link" data-bs-dismiss="modal">Close</button>
+                            <Button variant="danger" data-bs-dismiss="modal" onClick={() => {handleDelete(show)}}>
+                            Delete</Button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                 </Card.Body>
                 </Card>
 

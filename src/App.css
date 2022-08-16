@@ -31,6 +31,10 @@ h1 {
   background: black;
   margin-top: 95px;
 }
+#row {
+  background: white;
+  border-radius: 25px;
+}
 .homeText {
   font-family: 'Anton', sans-serif;
   margin-top: 45px;
@@ -80,6 +84,9 @@ p {
 }
 #green, td {
   color: rgb(13, 247, 36);
+}
+#red {
+  color: rgb(244, 48, 107);
 }
 #adminButtons {
   background-color: #222529;
