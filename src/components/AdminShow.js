@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as React from 'react';
 import Edit from '../components/Edit'
+import { BsArrowDownCircle } from 'react-icons/bs'
 
 
 const Shows = (props) => {
@@ -102,6 +103,13 @@ const Shows = (props) => {
                         </div>
                     </div>
                     </div>
+                    <br/>
+                    
+                    <p id='red'>
+                    <BsArrowDownCircle id='arrowIcon'/>
+                        See Google Maps info below for show location
+                    <BsArrowDownCircle id='arrowIcon'/>
+                    </p>
                 </Card.Body>
                 </Card>
 

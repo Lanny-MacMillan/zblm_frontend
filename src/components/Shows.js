@@ -3,13 +3,13 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as React from 'react';
+import { BsArrowDownCircle } from 'react-icons/bs'
 
 
 const Shows = () => {
     const [shows, setShows] = useState([])
     const [showShows, setShowShows] = useState(true)
     const [showshow, setShowshow] = useState(false)
-    import { BsArrowDownCircle } from 'react-icons/bs'
 
 
 
@@ -94,11 +94,14 @@ const Shows = () => {
                         onClick={homePage}>Back
                     </Button>
                     <br/>
-                    <BsArrowDownCircle/>
-                    <p id='red'>See Google Maps info below for show location</p>
+                    
+                    <p id='red'>
+                    <BsArrowDownCircle id='arrowIcon'/>
+                        See Google Maps info below for show location
+                    <BsArrowDownCircle id='arrowIcon'/>
+                    </p>
                 </Card.Body>
-                </Card>
-
+                    <h5 id='title'>{show.location}</h5>
                 {/*============= GOOGLE MAPS API =============*/}
                 <iframe
                         className="map"
@@ -108,6 +111,7 @@ const Shows = () => {
                         src={`${googleURL} + ${show.location}`}>
                     </iframe>
                 {/*============= GOOGLE MAPS API =============*/}
+                </Card>
                 </> 
             )
             })}

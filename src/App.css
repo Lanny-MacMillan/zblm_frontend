@@ -88,6 +88,9 @@ p {
 #red {
   color: rgb(244, 48, 107);
 }
+#arrowIcon {
+  margin: 20px;
+}
 #adminButtons {
   background-color: #222529;
   color: white;
