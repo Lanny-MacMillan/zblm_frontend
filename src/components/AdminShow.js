@@ -96,11 +96,9 @@ const Shows = (props) => {
                         <div class="modal-body">
                             Are you sure you want to delete this Show Permanantly?
                         </div>
-                        <div class="modal-footer">
                             <button type="button" className="btn btn-link" data-bs-dismiss="modal">Close</button>
                             <Button variant="danger" data-bs-dismiss="modal" onClick={() => {handleDelete(show)}}>
                             Delete</Button>
-                        </div>
                         </div>
                     </div>
                     </div>

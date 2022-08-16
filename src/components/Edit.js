@@ -141,6 +141,7 @@ const Edit = (props) => {
             </div>
             <div className="d-grid gap-2 mt-3">
                 <Button 
+                data-bs-dismiss="modal"
                 type="submit" 
                 // id='adminButtons'
                 variant='primary'
