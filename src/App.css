@@ -317,6 +317,9 @@ label {
   .homeText {
     font-size: 45px;
   }
+  .homeTextLeeman {
+    font-size: 45px;
+  }
   .home {
     margin-top: 95px;
   }
@@ -336,6 +339,9 @@ label {
       "member4";
   }
   .homeText {
+    font-size: 45px;
+  }
+  .homeTextLeeman {
     font-size: 45px;
   }
   .home {
