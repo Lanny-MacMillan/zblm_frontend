@@ -57,7 +57,9 @@ const Shows = () => {
             return(
                 <>
                 <Card className='text-center' id='card' 
-                style={{ width: '100vh' }}
+                style={
+                    { width: '100vh', height: '2000px' }
+                }
                 >
                 <Card.Header className='p-0' id='cardHeader'>
                         <Button 
@@ -96,12 +98,13 @@ const Shows = () => {
                     <br/>
                     
                     <p id='red'>
+                        <p id='red1'>See Google Maps info below for show location</p>
                     <BsArrowDownCircle id='arrowIcon'/>
-                        See Google Maps info below for show location
                     <BsArrowDownCircle id='arrowIcon'/>
                     </p>
-                </Card.Body>
                     <h5 id='title'>{show.location}</h5>
+                </Card.Body>
+
                 {/*============= GOOGLE MAPS API =============*/}
                 <iframe
                         className="map"

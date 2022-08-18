@@ -139,6 +139,16 @@ h1 {
   text-align: center;
   font-family: 'Mouse Memoirs', sans-serif;
   margin-top: 35px;
+  color: rgb(244, 48, 107);
+  background: white
+}
+#titleVenue {
+  text-align: center;
+  font-family: 'Mouse Memoirs', sans-serif;
+  padding: 10px;
+  color: rgb(13, 247, 36);
+  background: black;
+  margin: 0px;
 }
 p {
   color: white;
@@ -169,6 +179,10 @@ p {
 }
 #red {
   color: rgb(244, 48, 107);
+}
+#red1 {
+  color: rgb(244, 48, 107);
+  margin-top: 20px;
 }
 #arrowIcon {
   margin: 20px;
@@ -218,6 +232,39 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: rgb(112, 112, 112);
+}
+/* ====================== LOADING SPINNER ====================== */
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+.loader {
+  display: none;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  border: 2px solid #ccc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-top-color: #1ecd97;
+  border-left-color: #1ecd97;
+  animation: spin 1s infinite ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /* ===================== ABOUT-GRID ===================== */
 
@@ -378,6 +425,10 @@ label {
   .home {
     margin-top: 95px;
   }
+  #red {
+    font-size: 16px;
+    margin: 0px;
+  }
 }
 @media only screen and (min-device-width: 576px) and (max-device-width: 767px) {
   .container {  
@@ -401,6 +452,9 @@ label {
   }
   .home {
     margin-top: 95px;
+  }
+  #red {
+    font-size: 16px;
   }
 }
 /* @media only screen and (min-device-width: 768px) and (max-device-width: 575px) {

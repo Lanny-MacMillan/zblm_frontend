@@ -1,23 +1,20 @@
 import '../App.css';
 import axios from 'axios'
-import {useState} from 'react'
-import '../App.css';
+import { useState, CSSProperties } from 'react'
 import AdminCrud from '../components/AdminCrud'
 import Button from 'react-bootstrap/Button';
-
+import FadeLoader from "react-spinners/FadeLoader";
 
 const Admin = (props) => {
     const [users, setUsers] = useState([])
     const [userLogIn, setUserLogIn] = useState(false)
     const [currentUser, setCurrentUser] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const BASE_URL = 'https://glacial-tor-04352.herokuapp.com/api/'
 
     let emptyUser = {email: '', password: ''}
     const [user, setUser] = useState(emptyUser)
-
-
-
     const [userSignIn, setUserSignIn] = useState({...props.userSignIn})
 
     const handleChange = (event) => {
@@ -39,7 +36,6 @@ const Admin = (props) => {
         console.log(userSignIn)
         handleUserLogin(userSignIn)
     }
-
     //======== CREATE USER ==============
     const createUser = (addUser) => {
         console.log(addUser)
@@ -52,6 +48,7 @@ const Admin = (props) => {
     }
     // //======== RETURNING USER LOGIN ========
     const handleUserLogin = (userAccount) => {
+        setLoading(true)
         console.log('attempting to return user login')
         console.log(userAccount)
         axios
@@ -73,13 +70,18 @@ const Admin = (props) => {
                 } else  {
                     console.log("match")
                     setUserLogIn(true)
+                    setLoading(false)
                 } 
             })
     }
     const forgotPassword = () => {
         alert('Jesus Christ...Text your bandmates if you forgot, or contact the Site Admin')
     }
-
+    const override = {
+        display: "block",
+        margin: "0 auto",
+    };
+// ================================================
 
     return (
         <>
@@ -120,17 +122,26 @@ const Admin = (props) => {
                 id='adminButtons'
                 variant='light'
                 onClick={handleSubmitLogin}
-                >Submit</Button>
+                >{loading ? (
+                    <FadeLoader size={50} cssOverride={override}/>
+                ):(
+                    'Submit'
+                )}
+                </Button>
             </div>
             <p className="forgot-password text-right mt-2">
                 Forgot <a href='' onClick={forgotPassword}>password?</a>
             </p>
             </div>
         </form>
-    </div>
-    }   
+        <FadeLoader />
+        </div>
+        }  
+
+
         </>
     );
 }
 
 export default Admin;
+

@@ -6,6 +6,7 @@ const Gallery = () => {
         <div className='mainContainer'>
             <div className='gallery'>
                 <h1>Gallery Page</h1>
+                <h3>Images coming soon</h3>
             </div>
         </div>
         </>

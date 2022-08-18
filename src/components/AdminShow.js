@@ -58,7 +58,9 @@ const Shows = (props) => {
             return(
                 <>
                 <Card className='text-center' id='card' 
-                style={{ width: '100vh' }}
+                style={
+                    { width: '100vh', height: '2000px' }
+                }
                 >
                 <Card.Header>
                     {show.date}
@@ -103,14 +105,14 @@ const Shows = (props) => {
                     </div>
                     </div>
                     <br/>
-                    
                     <p id='red'>
+                        <p id='red1'>See Google Maps info below for show location</p>
                     <BsArrowDownCircle id='arrowIcon'/>
-                        See Google Maps info below for show location
                     <BsArrowDownCircle id='arrowIcon'/>
                     </p>
+                <h5 id='titleVenue'>{show.location}</h5>
                 </Card.Body>
-                <h5 id='title'>{show.location}</h5>
+
                 {/*============= GOOGLE MAPS API =============*/}
                 <iframe
                         className="map"
