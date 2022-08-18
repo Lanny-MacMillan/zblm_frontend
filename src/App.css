@@ -121,13 +121,13 @@ h1 {
 
   from { text-shadow: none }
   to   { text-shadow: 
-    0 2px 5px #FF0000, 
-    -2px 5px 5px #ff7f00, 
-    -4px 10px 5px #ffff00,
-    -8px 15px 5px #00ff00,
-    -12px 20px 5px #0000ff,
-    -16px 25px 5px #4b0082,
-    -20px 30px 5px #9400d3;
+    0 2px 4px #FF0000, 
+    -2px 5px 4px #ff7f00, 
+    -4px 10px 4px #ffff00,
+    -8px 15px 4px #00ff00,
+    -12px 20px 4px #0000ff,
+    -16px 25px 4px #4b0082,
+    -20px 30px 4px #9400d3;
   }
 }
 #loginForm {
@@ -369,7 +369,7 @@ label {
       "member3" 
       "member4"
   }
-  .homeText {
+  .homeTextBen, .homeTextZach, .homeTextLanny {
     font-size: 45px;
   }
   .homeTextLeeman {
@@ -393,7 +393,7 @@ label {
       "member3" 
       "member4";
   }
-  .homeText {
+  .homeTextBen, .homeTextZach, .homeTextLanny {
     font-size: 45px;
   }
   .homeTextLeeman {
