@@ -1,6 +1,7 @@
 import '../App.css';
 import Setlist from '../components/Setlist';
-import Shows from '../components/AdminShow';
+import AdminShows from '../components/AdminShow';
+import AdminPhotos from '../components/AdminGallery';
 import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState} from 'react'
@@ -65,8 +66,8 @@ const AdminCrud = () => {
             </Col>
         </Row>
         </Container>
-        {photos ? <Photos /> : null}
-        {shows ? <Shows /> : null}
+        {photos ? <AdminPhotos /> : null}
+        {shows ? <AdminShows /> : null}
         {songs ? <Setlist /> : null}
         </>
     );

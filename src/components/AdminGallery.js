@@ -3,10 +3,11 @@ import {useState, useEffect} from 'react'
 import { storage } from "./firebase";
 import { ref, uploadBytes, listAll, getDownloadURL, list } from "firebase/storage"
 import { v4 } from 'uuid'
+import Button from 'react-bootstrap/Button';
 
 
 
-const Gallery = (props) => {
+const AdminGallery = (props) => {
     const [imageUpload, setImageUpload] = useState(null)
     const [imageUrls, setImageUrls] = useState([]);
 
@@ -38,22 +39,20 @@ const Gallery = (props) => {
     }, []);
     return (
         <> 
-            {/* <div className="showContainer">
-                <h1>Some Images of Us!</h1>
-            </div>
-            <div className='bandImages'>
-                {imageUrls.map((url) => {
-                    return <img className='urlImg' src={url}
-                />
-            })}
-            </div>   */}
-
-        <h1 id='imagesHeader'>Some Images of Us!</h1>
+        <h1 id='imagesAdminHeader'>Some Images of Us!</h1>
         <hr id='hr' class="mb-5"/>
-            {/* <!--Grid row--> */}
+            <div className='imageFile'>
+            <label for="file-upload" class="custom-file-upload">
+                Image Select
+            </label>
+            {/* <h5>{imageUpload}</h5> */}
+                <input type='file' id="file-upload" onChange={(event) => {setImageUpload(event.target.files[0]);
+                }}/>
+                <br/>
+                <Button className='imageText' id='Button' variant="warning" onClick={uploadImage}>Upload Image</Button>
+            </div>
             <div class="row">
 
-            {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-12 mb-4">
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(58).jpg" class="img-fluid mb-4" alt=""/>
@@ -62,9 +61,6 @@ const Gallery = (props) => {
                     data-wow-delay="0.3s"/>
 
                 </div>
-                {/* <!--Grid column--> */}
-
-                {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-6 mb-4">
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(74).jpg" class="img-fluid mb-4" alt=""
@@ -74,9 +70,6 @@ const Gallery = (props) => {
                     data-wow-delay="0.4s"/>
 
                 </div>
-                {/* <!--Grid column--> */}
-
-                {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-6 mb-4">
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(77).jpg" class="img-fluid mb-4" alt=""
@@ -86,13 +79,30 @@ const Gallery = (props) => {
                     data-wow-delay="0.5s"/>
 
                 </div>
-            {/* <!--Grid column--> */}
-
             </div>
-            {/* <!--Grid row--> */}
+            <div class="col-lg-4 col-md-6 mb-4">
 
-        {/* </div> */}
+
+
+</div>
+            <div className='bandImages'>
+                {imageUrls.map((url) => {
+                    return (
+                    <>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 mb-4">
+                        <img src={url} class="img-fluid mb-4" alt=""
+                        data-wow-delay="0.1s"/>
+
+                        </div>
+                    </div>
+
+                    </>
+
+                    )
+            })}
+            </div>
         </>
     )
 }
-export default Gallery
+export default AdminGallery

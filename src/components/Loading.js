@@ -1,6 +1,6 @@
 import {useState } from 'react'
 import '../App.css'
-import CircleLoader from "react-spinners/ClipLoader";
+import { Audio } from  'react-loader-spinner'
 
 const Loading = () => {
     const [loading, setLoading] = useState(false)
@@ -20,9 +20,17 @@ const Loading = () => {
         <>
         <button onClick={onClick}>
             {loading ? (
-                <CircleLoader />
+                <Audio
+                height = "80"
+                width = "80"
+                radius = "9"
+                color = 'green'
+                ariaLabel = 'three-dots-loading'     
+                wrapperStyle
+                wrapperClass
+                />
             ):(
-                'Submit'
+                null
             )}
         </button>
         

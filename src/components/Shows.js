@@ -10,11 +10,11 @@ const Shows = () => {
     const [shows, setShows] = useState([])
     const [showShows, setShowShows] = useState(true)
     const [showshow, setShowshow] = useState(false)
-
+    const [loading, setLoading] = useState(false)
 
 
     const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_API_KEY}&q=`
-    const APIBaseURL = 'https://leeman-backend.herokuapp.com/api/shows'
+    const APIBaseURL = 'https://zblm-backend.herokuapp.com/api/shows'
 
     const getShows = () => {
         axios
@@ -62,12 +62,7 @@ const Shows = () => {
                 }
                 >
                 <Card.Header className='p-0' id='cardHeader'>
-                        <Button 
-                        id='Button' 
-                        type="button" 
-                        variant="light" 
-                        onClick={homePage}>Back
-                        </Button>
+
                     {show.date}
 
                     
@@ -164,7 +159,7 @@ const Shows = () => {
     }, [])
 
     return (
-        <>
+        <> 
             {showShows ? <DisplayAll/> : null}
             {showshow ? <DisplayOne/> : null}     
         </>

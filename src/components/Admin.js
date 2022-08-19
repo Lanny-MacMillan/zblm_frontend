@@ -1,9 +1,8 @@
 import '../App.css';
 import axios from 'axios'
-import { useState, CSSProperties } from 'react'
+import { useState } from 'react'
 import AdminCrud from '../components/AdminCrud'
 import Button from 'react-bootstrap/Button';
-import FadeLoader from "react-spinners/FadeLoader";
 
 const Admin = (props) => {
     const [users, setUsers] = useState([])
@@ -123,7 +122,7 @@ const Admin = (props) => {
                 variant='light'
                 onClick={handleSubmitLogin}
                 >{loading ? (
-                    <FadeLoader size={50} cssOverride={override}/>
+                    'Loading...'
                 ):(
                     'Submit'
                 )}
@@ -134,7 +133,6 @@ const Admin = (props) => {
             </p>
             </div>
         </form>
-        <FadeLoader />
         </div>
         }  
 

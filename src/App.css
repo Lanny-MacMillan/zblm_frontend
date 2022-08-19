@@ -195,6 +195,57 @@ p {
   background-color: rgb(13, 247, 36);
   color: black;
 }
+.bandImages {
+  /* width: 100vw; */
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 350px;
+  max-width: 350px;
+}
+#hr {
+  color:white
+}
+#imagesHeader { 
+  padding-top: 65px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  color: rgb(13, 247, 36)
+}
+#imagesAdminHeader { 
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  color: rgb(13, 247, 36)
+}
+.imageFile {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: white;
+}
+#Button.imageText {
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 5px;;
+  cursor: pointer;
+  margin:15px;
+}
+.custom-file-upload:hover {
+  background-color: rgb(13, 247, 36);
+  color: black;
+}
 
 /* ===================== LOGIN FORM ===================== */
 .Auth-form-container {
@@ -234,10 +285,7 @@ label {
   color: rgb(112, 112, 112);
 }
 /* ====================== LOADING SPINNER ====================== */
-/* * {
-  margin: 0;
-  padding: 0;
-} */
+
 
 .loader {
   display: none;
@@ -462,5 +510,27 @@ label {
 } */
 
 
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
 
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+}
 

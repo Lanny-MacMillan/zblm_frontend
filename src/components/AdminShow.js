@@ -15,7 +15,7 @@ const Shows = (props) => {
     const { loading = false } = props;
 
     const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_API_KEY}&q=`
-    const APIBaseURL = 'https://leeman-backend.herokuapp.com/api/shows'
+    const APIBaseURL = 'https://zblm-backend.herokuapp.com/api/shows'
 
     const getShows = () => {
         axios
