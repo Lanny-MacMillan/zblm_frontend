@@ -58,7 +58,7 @@ h1 {
   margin-top: 45px;
   color: white;
   font-size: 85px;
-  animation: Ben 3s step-end both;
+  animation: Ben 2s step-end both;
 }
 @keyframes Ben
 {
@@ -76,7 +76,7 @@ h1 {
   margin-top: 45px;
   color: white;
   font-size: 85px;
-  animation: Zach 6s step-end both;
+  animation: Zach 4s step-end both;
 }
 @keyframes Zach
 {
@@ -94,7 +94,7 @@ h1 {
   margin-top: 45px;
   color: white;
   font-size: 85px;
-  animation: Lanny 9s step-end both;
+  animation: Lanny 6s step-end both;
 }
 @keyframes Lanny
 {
@@ -112,7 +112,7 @@ h1 {
   margin-top: 45px;
   color: white;
   font-size: 85px;
-  animation: Leeman 12s step-end both;
+  animation: Leeman 8s step-end both;
 }
 @keyframes Leeman
 {

@@ -150,6 +150,7 @@ const Add = (props) => {
                 // id='adminButtons'
                 variant='primary'
                 onClick={handleSubmit}
+                data-bs-dismiss="modal"
                 >Submit</Button>
             </div>
             </div>

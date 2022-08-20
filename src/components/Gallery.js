@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react'
 import { storage } from "./firebase";
 import { ref, uploadBytes, listAll, getDownloadURL, list } from "firebase/storage"
 import { v4 } from 'uuid'
+import Ben from '../images/Fish.JPG';
+import Matt from '../images/DrumsSolo.jpg';
 
 
 
@@ -50,48 +52,51 @@ const Gallery = (props) => {
 
         <h1 id='imagesHeader'>Some Images of Us!</h1>
         <hr id='hr' class="mb-5"/>
-            {/* <!--Grid row--> */}
             <div class="row">
-
-            {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-12 mb-4">
-
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(58).jpg" class="img-fluid mb-4" alt=""/>
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(66).jpg" class="img-fluid mb-4" alt=""
                     data-wow-delay="0.3s"/>
-
                 </div>
-                {/* <!--Grid column--> */}
-
-                {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-6 mb-4">
-
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(74).jpg" class="img-fluid mb-4" alt=""
                     data-wow-delay="0.1s"/>
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(64).jpg" class="img-fluid mb-4" alt=""
                     data-wow-delay="0.4s"/>
-
                 </div>
-                {/* <!--Grid column--> */}
-
-                {/* <!--Grid column--> */}
                 <div class="col-lg-4 col-md-6 mb-4">
-
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(77).jpg" class="img-fluid mb-4" alt=""
                     data-wow-delay="0.2s"/>
 
                     <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(67).jpg" class="img-fluid mb-4" alt=""
                     data-wow-delay="0.5s"/>
-
                 </div>
-            {/* <!--Grid column--> */}
-
             </div>
-            {/* <!--Grid row--> */}
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(58).jpg" class="img-fluid mb-4" alt=""/>
 
-        {/* </div> */}
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(66).jpg" class="img-fluid mb-4" alt=""
+                    data-wow-delay="0.3s"/>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(74).jpg" class="img-fluid mb-4" alt=""
+                    data-wow-delay="0.1s"/>
+
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(64).jpg" class="img-fluid mb-4" alt=""
+                    data-wow-delay="0.4s"/>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(77).jpg" class="img-fluid mb-4" alt=""
+                    data-wow-delay="0.2s"/>
+
+                    <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(67).jpg" class="img-fluid mb-4" alt=""
+                    data-wow-delay="0.5s"/>
+                </div>
+            </div>
+
         </>
     )
 }
