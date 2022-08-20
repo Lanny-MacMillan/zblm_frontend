@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+
 * {
   background: black;
 }
@@ -65,7 +67,7 @@ h1 {
   align-items: center;
 }
 .homeTextBen {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Anton', cursive;
   margin-top: 45px;
   color: white;
   font-size: 85px;
@@ -86,8 +88,7 @@ h1 {
   }
 }
 .homeTextZach {
-  font-family: 'Anton', sans-serif;
-  margin-top: 45px;
+  font-family: 'Anton', cursive;  margin-top: 45px;
   color: white;
   font-size: 85px;
   animation: Zach 4s step-end both;
@@ -107,8 +108,9 @@ h1 {
   }
 }
 .homeTextLanny {
-  font-family: 'Anton', sans-serif;
-  margin-top: 45px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Anton', cursive;  margin-top: 45px;
   color: white;
   font-size: 85px;
   animation: Lanny 6s step-end both;
@@ -128,8 +130,9 @@ h1 {
   }
 }
 .homeTextLeeman {
-  font-family: 'Anton', sans-serif;
-  margin-top: 45px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Anton', cursive;  margin-top: 45px;
   color: white;
   font-size: 85px;
   animation: Leeman 8s step-end both;
@@ -336,8 +339,10 @@ label {
 /* ================================ SOCIAL ICONS ================================ */
 
 .social {
-  border-radius: 15px;;
-  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  background: rgb(13, 247, 36);
   margin-top: 95px;
   visibility: hidden;
   animation: Social 10s step-end both;
@@ -355,18 +360,28 @@ label {
   rgb(13, 247, 36) 0px -3px 5px;
   }
 }
+
 #FaFacebookSquare {
   margin: 10px;
   color: blue;
+  background: white;
+  border: 2px solid black;
+  border-radius: 5px;;
 }
 #FaFacebookSquare:hover {
   transform: translateY(-3px);
+}
+
+a[href$="https://music.apple.com"],[href$="https://www.youtube.com/"],[href$="https://open.spotify.com"],[href$="https://www.facebook.com/"],[href$="https://www.instagram.com/"] {
+  background: rgb(13, 247, 36);
+
 }
 #FaYoutube {
   margin: 10px;
   color: rgb(255, 0, 0);
   background: white;
   border-radius: 5px;
+  border: 2px solid black;
 }
 #FaYoutube:hover {
   transform: translateY(-3px);
@@ -376,6 +391,7 @@ label {
   background: rgb(250,88,106);
   color: rgb(255, 255, 255);
   border-radius: 20px;
+  border: 2px solid black;
 }
 #SiItunes:hover {
   transform: translateY(-3px);
@@ -385,13 +401,15 @@ label {
   color: rgb(28,215,96);
   background: rgb(255, 255, 255);
   border-radius: 20px;
+  border: 2px solid black;
 }
 #FaSpotify:hover {
   transform: translateY(-3px);
 }
 #FaInstagram {
   margin: 10px;
-  border-radius: 10px;;
+  border-radius: 10px;
+  border: 2px solid black;
   background: 
   radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }

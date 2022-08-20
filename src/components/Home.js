@@ -12,6 +12,7 @@ const Home = () => {
                 <h1 className='homeTextZach'>Zach &</h1>
                 <h1 className='homeTextLanny'>Lanny &</h1>
                 <h1 className='homeTextLeeman'>Leeman</h1>
+                <br/>
                 <SocialIcons />
             </div>
         </div>

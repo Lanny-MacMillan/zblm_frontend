@@ -17,7 +17,7 @@ const SocialIcons = () => {
                             <FaFacebookSquare size='2em' id='FaFacebookSquare'/>
                         </a>
                         <a href="https://www.instagram.com/" target="_blank">
-                            <FaInstagram size='2em' id='FaInstagram' />
+                            <FaInstagram size='2em' class='FaInstagram' id='FaInstagram' />
                         </a>
                         <a href="https://www.youtube.com/" target="_blank">
                             <FaYoutube size='2em' id='FaYoutube'/>
