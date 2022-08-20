@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import * as React from 'react';
 import { BsArrowDownCircle } from 'react-icons/bs'
-
+import { TailSpin } from  'react-loader-spinner'
 
 const Shows = () => {
     const [shows, setShows] = useState([])
@@ -17,16 +17,20 @@ const Shows = () => {
     const APIBaseURL = 'https://zblm-backend.herokuapp.com/api/shows'
 
     const getShows = () => {
+        setLoading(true)
         axios
             .get(APIBaseURL)
             .then(response => setShows(response.data),
             (err)=> console.error(err)
             )
-            .catch((error)=> console.error(error))
+            .catch(
+                (error)=> console.error(error)
+                )
     }
     const DisplayAll = () => {
         return (
         <>
+        {loading ?
         <div className='mainContainer'>
             {shows.map((show) => {
             return(
@@ -45,7 +49,12 @@ const Shows = () => {
                 </>
                 )}
             )}
-        </div>
+        </div> 
+        // END OF TURNARY 
+        : <div className='loadingContainer'>
+            <TailSpin color="#00BFFF" height={80} width={80} />
+            </div> 
+            }
         </>
         )
     }
@@ -153,15 +162,27 @@ const Shows = () => {
                 homePage()
             })
     }
-
+    const displayShows = () => {
+        return (
+            <>
+            {showShows ? <DisplayAll/> : null}
+            {showshow ? <DisplayOne/> : null}   
+            </>
+        )
+    }
     useEffect(() => {
     getShows()
     }, [])
 
     return (
         <> 
-            {showShows ? <DisplayAll/> : null}
-            {showshow ? <DisplayOne/> : null}     
+        {/* <div className='mainContainer'>
+            <div className='home'> */}
+                {/* {loading ?  <DisplayAll/> : <TailSpin color="#00BFFF" height={80} width={80} /> } */}
+                    {showShows ? <DisplayAll/> : null}
+                    {showshow ? <DisplayOne/> : null}     
+            {/* </div>
+        </div> */}
         </>
     )
 }

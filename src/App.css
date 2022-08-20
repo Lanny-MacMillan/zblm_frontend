@@ -10,7 +10,6 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-self: center;
 }
 .showContainer {
   display: flex;
@@ -19,6 +18,18 @@ h1 {
   justify-content: space-evenly;
   width: 720px;
 }
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+#audioAnimation {
+  display: flex;
+  margin-top: 85px;
+  margin-left: 70px;
+}
+
 #card {
   margin-top: 85px;
   margin-right: 25px;
@@ -62,6 +73,9 @@ h1 {
 }
 @keyframes Ben
 {
+  from { color: white }
+  to { color: Black }
+
   from { text-shadow: none }
   to   { text-shadow:
     rgb(13, 247, 36) 0px 54px 55px,
@@ -80,6 +94,9 @@ h1 {
 }
 @keyframes Zach
 {
+  from { color: white }
+  to { color: Black }
+
   from { text-shadow: none }
   to   { text-shadow:
     rgb(13, 247, 36) 0px 54px 55px,
@@ -98,6 +115,9 @@ h1 {
 }
 @keyframes Lanny
 {
+  from { color: white }
+  to { color: Black }
+
   from { text-shadow: none }
   to   { text-shadow:
     rgb(13, 247, 36) 0px 54px 55px,
@@ -117,19 +137,18 @@ h1 {
 @keyframes Leeman
 {
   from { color: white }
-  to { color: #FF0000 }
+  to { color: Black }
 
   from { text-shadow: none }
   to   { text-shadow: 
-    0 2px 2px #FF0000, 
-    -2px 5px 2px #ff7f00, 
-    -4px 10px 2px #ffff00,
-    -8px 15px 2px #00ff00,
-    -12px 20px 2px #0000ff,
-    -16px 25px 2px #4b0082,
-    -20px 30px 2px #9400d3;
+    rgb(13, 247, 36) 0px 54px 55px,
+    rgb(13, 247, 36) 0px -12px 30px,
+    rgb(13, 247, 36) 0px 4px 6px,
+    rgb(13, 247, 36) 0px 12px 13px,
+    rgb(13, 247, 36) 0px -3px 5px;
   }
 }
+
 #loginForm {
   margin: 15px;
   padding: 15px;
@@ -284,8 +303,7 @@ label {
   font-weight: 600;
   color: rgb(112, 112, 112);
 }
-/* ====================== LOADING SPINNER ====================== */
-
+/* ============================= LOADING SPINNER ============================ */
 
 .loader {
   display: none;
@@ -314,7 +332,88 @@ label {
     transform: rotate(360deg);
   }
 }
-/* ===================== ABOUT-GRID ===================== */
+
+/* ================================ SOCIAL ICONS ================================ */
+
+.social {
+  border-radius: 15px;;
+  background: transparent;
+  margin-top: 95px;
+  visibility: hidden;
+  animation: Social 10s step-end both;
+}
+@keyframes Social {
+  from { visibility: hidden }
+  to { visibility: visible }
+
+  from { box-shadow: none }
+  to   { box-shadow: 
+  rgb(13, 247, 36) 0px 54px 55px,
+  rgb(13, 247, 36) 0px -12px 30px,
+  rgb(13, 247, 36) 0px 4px 6px,
+  rgb(13, 247, 36) 0px 12px 13px,
+  rgb(13, 247, 36) 0px -3px 5px;
+  }
+}
+#FaFacebookSquare {
+  margin: 10px;
+  color: blue;
+}
+#FaFacebookSquare:hover {
+  transform: translateY(-3px);
+}
+#FaYoutube {
+  margin: 10px;
+  color: rgb(255, 0, 0);
+  background: white;
+  border-radius: 5px;
+}
+#FaYoutube:hover {
+  transform: translateY(-3px);
+}
+#SiItunes {
+  margin: 10px;
+  background: rgb(250,88,106);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+#SiItunes:hover {
+  transform: translateY(-3px);
+}
+#FaSpotify {
+  margin: 10px;
+  color: rgb(28,215,96);
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+#FaSpotify:hover {
+  transform: translateY(-3px);
+}
+#FaInstagram {
+  margin: 10px;
+  border-radius: 10px;;
+  background: 
+  radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+#FaInstagram:hover {
+  transform: translateY(-3px);
+}
+@keyframes color-shift3 {
+  0% {
+      color: rgb(147, 12, 250);
+  }
+  33% {
+      color: rgb(208, 61, 3);
+  }
+  66% {
+      color: rgb(255, 217, 0);
+  }
+  100% {
+      color: #ed5cd8;
+  }
+}
+
+/* ================================ ABOUT-GRID ================================ */
 
 .container {  
   display: grid;
