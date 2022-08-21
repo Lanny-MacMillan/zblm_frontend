@@ -57,7 +57,7 @@ const Shows = (props) => {
             {shows.map((show) => {
             return(
                 <>
-                <Card className='text-center' id='card' 
+                <Card className='text-center' id='cardSingle' 
                 style={
                     { width: '100vh', height: '2000px' }
                 }

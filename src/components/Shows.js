@@ -17,12 +17,12 @@ const Shows = () => {
     const APIBaseURL = 'https://zblm-backend.herokuapp.com/api/shows'
 
     const getShows = () => {
-        setLoading(true)
+        // setLoading(true)
         axios
             .get(APIBaseURL)
             .then(response => setShows(response.data),
-            (err)=> console.error(err)
-            )
+                (err)=> console.error(err)
+                )
             .catch(
                 (error)=> console.error(error)
                 )
@@ -65,7 +65,7 @@ const Shows = () => {
             {shows.map((show) => {
             return(
                 <>
-                <Card className='text-center' id='card' 
+                <Card className='text-center' id='cardSingle' 
                 style={
                     { width: '100vh', height: '2000px' }
                 }
@@ -162,15 +162,8 @@ const Shows = () => {
                 homePage()
             })
     }
-    const displayShows = () => {
-        return (
-            <>
-            {showShows ? <DisplayAll/> : null}
-            {showshow ? <DisplayOne/> : null}   
-            </>
-        )
-    }
     useEffect(() => {
+    setLoading(true)
     getShows()
     }, [])
 

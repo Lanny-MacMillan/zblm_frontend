@@ -76,10 +76,15 @@ const Admin = (props) => {
     const forgotPassword = () => {
         alert('Jesus Christ...Text your bandmates if you forgot, or contact the Site Admin')
     }
-    const override = {
-        display: "block",
-        margin: "0 auto",
-    };
+    const ThreeDots = () => {
+        return (
+            <>
+            <div style={{display: 'flex', justifyContent: 'center', background: 'transparent'}}>
+                        <div class="dot-pulse"></div>
+            </div>
+            </>
+        )
+    }
 // ================================================
 
     return (
@@ -122,12 +127,13 @@ const Admin = (props) => {
                 variant='light'
                 onClick={handleSubmitLogin}
                 >{loading ? (
-                    'Loading...'
+                    <ThreeDots />
                 ):(
                     'Submit'
                 )}
                 </Button>
             </div>
+
             <p className="forgot-password text-right mt-2">
                 Forgot <a href='' onClick={forgotPassword}>password?</a>
             </p>
