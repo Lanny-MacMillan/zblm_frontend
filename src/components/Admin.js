@@ -62,14 +62,17 @@ const Admin = (props) => {
             })
             .then((response) => {
                 if (response == undefined){
+                    setLoading(false)
                     alert("No user match, please create an account or try again.")
                     console.log("undefined - no match")
                     console.log(response)
                     setUserLogIn(false)
+
                 } else  {
+                    setLoading(false)
                     console.log("match")
                     setUserLogIn(true)
-                    setLoading(false)
+
                 } 
             })
     }
