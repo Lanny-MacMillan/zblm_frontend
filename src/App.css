@@ -358,10 +358,6 @@ p {
   background-color: #222529;
   color: white;
 }
-#adminButtons:active {
-  -webkit-animation: vibrate-1 0.3s linear infinite both;
-  animation: vibrate-1 0.3s linear infinite both;
-}
 #adminButtons:hover {
   background-color: rgb(13, 247, 36);
   color: black;
@@ -498,19 +494,16 @@ label {
   background-color: #9880ff;
   color: #9880ff;
 }
-
 .dot-pulse::before {
   box-shadow: 9984px 0 0 -5px #9880ff;
   animation: dotPulseBefore 1.5s infinite linear;
   animation-delay: 0s;
 }
-
 .dot-pulse::after {
   box-shadow: 10014px 0 0 -5px #9880ff;
   animation: dotPulseAfter 1.5s infinite linear;
   animation-delay: .5s;
 }
-
 @keyframes dotPulseBefore {
   0% {
     box-shadow: 9984px 0 0 -5px #9880ff;
@@ -523,7 +516,6 @@ label {
     box-shadow: 9984px 0 0 -5px #9880ff;
   }
 }
-
 @keyframes dotPulse {
   0% {
     box-shadow: 9999px 0 0 -5px #9880ff;
@@ -536,7 +528,6 @@ label {
     box-shadow: 9999px 0 0 -5px #9880ff;
   }
 }
-
 @keyframes dotPulseAfter {
   0% {
     box-shadow: 10014px 0 0 -5px #9880ff;
@@ -608,7 +599,6 @@ label {
             transform: translate(0);
   }
 }
-
 .loading {
   border: 2px solid #ccc;
   width: 60px;
@@ -618,7 +608,6 @@ label {
   border-left-color: #1ecd97;
   animation: spin 1s infinite ease-in;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
